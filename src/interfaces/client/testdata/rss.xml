@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>運行情報サイト更新状況 - 鉄道コム</title>
+    <subtitle>全国の新幹線・JR在来線・大手私鉄、首都圏の地下鉄路線で運行情報が更新された公式サイトを表示します。関東や近畿エリアのみなどの絞り込み出力も可能。ご利用にあたっては、注意・制限事項をご確認ください。</subtitle>
+    <link rel="self" type="application/rss+xml" href="http://api.tetsudo.com/traffic/atom.xml"/>
+    <updated>2021-01-24T20:31:12+09:00</updated>
+    <id>http://www.tetsudo.com/traffic/</id>
+    <author>
+        <name>鉄道コム</name>
+    </author>
+    <entry>
+        <title>【JR東海（在来線）】高山線・太多線</title>
+        <link rel="alternate" type="text/html" href="https://traininfo.jr-central.co.jp/zairaisen/index.html"/>
+        <id>https://traininfo.jr-central.co.jp/zairaisen/index.html?20210110204520</id>
+        <updated>2021-01-24T20:25:25+09:00</updated>
+        <published>2021-01-10T20:45:20+09:00</published>
+        <summary>高山線・太多線の情報が掲載されています（20:25現在）</summary>
+        <category term="JR東海"/>
+    </entry>
+    <entry>
+        <title>【JR西日本（特急列車）】特急列車・はるか・くろしお</title>
+        <link rel="alternate" type="text/html" href="https://trafficinfo.westjr.co.jp/ex_index.html"/>
+        <id>https://trafficinfo.westjr.co.jp/ex_index.html?20200901000519</id>
+        <updated>2021-01-24T20:25:21+09:00</updated>
+        <published>2020-09-01T00:05:19+09:00</published>
+        <summary>特急列車・はるか・くろしおの情報が掲載されています（20:25現在）</summary>
+        <category term="JR西日本"/>
+    </entry>
+    <entry>
+        <title>【JR西日本（中国地区）】木次線・芸備線・山陽本線</title>
+        <link rel="alternate" type="text/html" href="https://trafficinfo.westjr.co.jp/chugoku.html"/>
+        <id>https://trafficinfo.westjr.co.jp/chugoku.html?20210102212013</id>
+        <updated>2021-01-24T20:25:13+09:00</updated>
+        <published>2021-01-02T21:20:13+09:00</published>
+        <summary>木次線・芸備線・山陽本線の情報が掲載されています（20:25現在）</summary>
+        <category term="JR西日本"/>
+    </entry>
+    <entry>
+        <title>【南海電気鉄道】特急ラピート・特急サザン</title>
+        <link rel="alternate" type="text/html" href="http://www.nankai.co.jp/railinfo.html"/>
+        <id>http://www.nankai.co.jp/railinfo.html?20200324195638</id>
+        <updated>2021-01-24T20:25:11+09:00</updated>
+        <published>2020-03-24T19:56:38+09:00</published>
+        <summary>特急ラピート・特急サザンの情報が掲載されています（20:25現在）</summary>
+        <category term="南海電気鉄道"/>
+    </entry>
+    <entry>
+        <title>【北陸新幹線】北陸新幹線（JR西日本）</title>
+        <link rel="alternate" type="text/html" href="https://traininfo.jreast.co.jp/train_info/shinkansen.aspx"/>
+        <id>https://traininfo.jreast.co.jp/train_info/shinkansen.aspx?20210115142048</id>
+        <updated>2021-01-24T20:25:02+09:00</updated>
+        <published>2021-01-15T14:20:48+09:00</published>
+        <summary>北陸新幹線（JR西日本）の情報が掲載されています（20:25現在）</summary>
+        <category term="JR東日本"/>
+    </entry>
+    <entry>
+        <title>【島原鉄道】島原鉄道線</title>
+        <link rel="alternate" type="text/html" href="http://www.shimatetsu.co.jp/"/>
+        <id>http://www.shimatetsu.co.jp/?20201025202423</id>
+        <updated>2021-01-24T20:24:25+09:00</updated>
+        <published>2020-10-25T20:24:23+09:00</published>
+        <summary>島原鉄道線の情報が掲載されています（20:24現在）</summary>
+    </entry>
+    <entry>
+        <title>【富士急行】特急列車</title>
+        <link rel="alternate" type="text/html" href="http://www.fujikyu-railway.jp/"/>
+        <id>http://www.fujikyu-railway.jp/?20200409052416</id>
+        <updated>2021-01-24T20:24:15+09:00</updated>
+        <published>2020-04-09T05:24:16+09:00</published>
+        <summary>特急列車の情報が掲載されています（20:24現在）</summary>
+        <category term="東日本の地方交通"/>
+    </entry>
+    <entry>
+        <title>【大井川鐵道】大井川本線・SL急行</title>
+        <link rel="alternate" type="text/html" href="http://oigawa-railway.co.jp/"/>
+        <id>http://oigawa-railway.co.jp/?20200820173045</id>
+        <updated>2021-01-24T20:01:27+09:00</updated>
+        <published>2020-08-20T17:30:45+09:00</published>
+        <summary>大井川本線・SL急行の情報が掲載されています（20:01現在）</summary>
+    </entry>
+</feed>
