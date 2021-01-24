@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS `routes` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `company_id` int NOT NULL,
+  `is_delay` boolean NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`)
 );
