@@ -878,4 +878,8 @@ INSERT INTO `routes_prefectures` (route_id, prefecture_id) VALUES
   (553, 5),
   (554, 22),
   (555, 40),
-  (556, 43);
+  (556, 43),
+  (557, 15),
+  (557, 16),
+  (557, 17),
+  (558, 19);
