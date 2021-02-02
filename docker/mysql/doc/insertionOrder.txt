@@ -1,0 +1,7 @@
+companies
+prefectures
+routes
+daily_route_summaries
+delay_starts
+routes_prefectures
+regions

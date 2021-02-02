@@ -1,0 +1,5 @@
+date=2021-01-31 05:12:14+0000
+os=Linux 5.4.0-64-generic
+schemaspy-version=6.1.1-SNAPSHOT
+schemaspy-build=6.1.1-SNAPSHOT.41 2020-10-02 14:04:37
+diagramImplementation=Graphviz dot 2.38
