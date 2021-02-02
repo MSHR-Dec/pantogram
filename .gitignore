@@ -4,3 +4,4 @@
 
 # docker
 docker/mysql/data
+docker/influxdb/data

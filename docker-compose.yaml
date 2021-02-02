@@ -20,6 +20,21 @@ services:
       - ./docker/mysql/sql:/docker-entrypoint-initdb.d
     networks: 
       - pantogram
+  influxdb:
+    image: influxdb:1.8
+    container_name: influxdb
+    environment:
+      INFLUXDB_ADMIN_USER: admin
+      INFLUXDB_ADMIN_PASSWORD: admin
+      INFLUXDB_USER: pantogram
+      INFLUXDB_USER_PASSWORD: pantogram
+      INFLUXDB_DB: pantogram
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./docker/influxdb/data:/var/lib/influxdb
+    networks:
+      - pantogram
 
 networks: 
   pantogram:
