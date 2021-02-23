@@ -1,6 +1,18 @@
 version: '3'
 
 services:
+  pantogram:
+    build:
+      context: .
+      dockerfile: ./docker/pantogram/Dockerfile
+    environment:
+      MYSQL_URL: mysql:3306
+      INFLUXDB_URL: influxdb:8086
+    volumes:
+      - ./docker/pantogram/script:/script
+    entrypoint: /script/start.sh
+    networks:
+      - pantogram
   mysql:
     build:
       context: ./docker/mysql
