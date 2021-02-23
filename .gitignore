@@ -3,5 +3,7 @@
 .idea
 
 # docker
-docker/mysql/data
-docker/influxdb/data
+/docker/mysql/data
+/docker/mysql/doc
+/docker/influxdb/*
+!/docker/influxdb/.gitkeep
