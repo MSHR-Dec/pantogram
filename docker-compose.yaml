@@ -47,6 +47,17 @@ services:
       - ./docker/influxdb/data:/var/lib/influxdb
     networks:
       - pantogram
+  grafana:
+    image: grafana/grafana:7.4.3
+    volumes:
+      - ./docker/grafana/data:/var/lib/grafana
+      - ./docker/grafana/influxdb.yaml:/etc/grafana/provisioning/datasources/influxdb.yaml
+      - ./docker/grafana/newsflash.yaml:/etc/grafana/provisioning/dashboards/newsflash.yaml
+      - ./docker/grafana/newsflash.json:/var/lib/grafana/dashboards/newsflash/newsflash.json
+    ports:
+      - "3000:3000"
+    networks:
+      - pantogram
 
 networks: 
   pantogram:
