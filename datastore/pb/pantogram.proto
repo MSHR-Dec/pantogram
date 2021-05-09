@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package datastore.pb;
+option go_package = "./pb";
+
+service Datastore {
+  rpc GetRouteDetail (Route) returns (RouteDetail) {}
+}
+
+message Route {
+  string Name = 1;
+}
+
+message RouteDetail {
+  string Name = 1;
+  string Company = 2;
+  repeated Prefecture Prefectures = 3;
+}
+
+message Prefecture {
+  string Name = 1;
+  uint32 Count = 2;
+}
