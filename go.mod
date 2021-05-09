@@ -8,6 +8,8 @@ require (
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/onsi/ginkgo v1.14.2
 	github.com/onsi/gomega v1.10.4
+	google.golang.org/grpc v1.37.0
+	google.golang.org/protobuf v1.26.0
 	gorm.io/driver/mysql v1.0.4
 	gorm.io/gorm v1.20.12
 )
