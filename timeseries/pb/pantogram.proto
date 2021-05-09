@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package timeseries.pb;
+option go_package = "./pb";
+
+service Timeseries {
+  rpc SaveTimeseries (SaveRequest) returns (SaveResponse) {}
+}
+
+message SaveRequest {
+  repeated RouteDetail RouteDetails = 1;
+}
+
+message RouteDetail {
+  string Name = 1;
+  string Company = 2;
+  repeated Prefecture Prefectures = 3;
+}
+
+message Prefecture {
+  string Name = 1;
+  uint32 Count = 2;
+}
+
+message SaveResponse {}
