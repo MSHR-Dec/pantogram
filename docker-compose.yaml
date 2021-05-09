@@ -1,18 +1,42 @@
 version: '3'
 
 services:
-  pantogram:
+  api:
     build:
       context: .
-      dockerfile: ./docker/pantogram/Dockerfile
+      dockerfile: ./docker/api/Dockerfile
     environment:
+      DATASTORE: datastore:8080
+      TIMESERIES: timeseries:8081
+    networks:
+      - pantogram
+
+  datastore:
+    build:
+      context: .
+      dockerfile: ./docker/datastore/Dockerfile
+    environment:
+      ENV: docker
       MYSQL_URL: mysql:3306
-      INFLUXDB_URL: influxdb:8086
     volumes:
-      - ./docker/pantogram/script:/script
+      - ./docker/datastore/script:/script
     entrypoint: /script/start.sh
     networks:
       - pantogram
+
+  timeseries:
+    build:
+      context: .
+      dockerfile: ./docker/timeseries/Dockerfile
+    environment:
+      ENV: docker
+      INFLUXDB_URL: influxdb:8086
+    volumes:
+      - ./docker/timeseries/script:/script
+    entrypoint: /script/start.sh
+    networks:
+      - pantogram
+
   mysql:
     build:
       context: ./docker/mysql
@@ -32,6 +56,7 @@ services:
       - ./docker/mysql/sql:/docker-entrypoint-initdb.d
     networks: 
       - pantogram
+
   influxdb:
     image: influxdb:1.8
     container_name: influxdb
@@ -47,6 +72,7 @@ services:
       - ./docker/influxdb/data:/var/lib/influxdb
     networks:
       - pantogram
+
   grafana:
     image: grafana/grafana:7.4.3
     volumes:
