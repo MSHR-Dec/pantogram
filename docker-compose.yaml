@@ -18,9 +18,6 @@ services:
     environment:
       ENV: docker
       MYSQL_URL: mysql:3306
-    volumes:
-      - ./docker/datastore/script:/script
-    entrypoint: /script/start.sh
     networks:
       - pantogram
 
@@ -31,9 +28,6 @@ services:
     environment:
       ENV: docker
       INFLUXDB_URL: influxdb:8086
-    volumes:
-      - ./docker/timeseries/script:/script
-    entrypoint: /script/start.sh
     networks:
       - pantogram
 
@@ -52,8 +46,6 @@ services:
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
-      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
-      - ./docker/mysql/sql:/docker-entrypoint-initdb.d
     networks: 
       - pantogram
 

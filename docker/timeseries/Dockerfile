@@ -11,4 +11,7 @@ COPY --from=build /timeseries/main /main
 RUN apk update \
     && apk add curl
 
-CMD ["/main"]
+COPY ./docker/timeseries/script/start.sh /start.sh
+RUN chmod 755 /start.sh
+
+CMD ["/start.sh"]

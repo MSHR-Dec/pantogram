@@ -11,4 +11,7 @@ COPY --from=build /datastore/main /main
 RUN apk update \
     && apk add mysql-client
 
-CMD ["/main"]
+COPY ./docker/datastore/script/start.sh /start.sh
+RUN chmod 755 /start.sh
+
+CMD ["/start.sh"]
