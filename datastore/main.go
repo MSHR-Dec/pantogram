@@ -4,6 +4,8 @@ import (
 	"log"
 	"net"
 
+	health "google.golang.org/grpc/health/grpc_health_v1"
+
 	"github.com/MSHR-Dec/pantogram/datastore/application"
 	"github.com/MSHR-Dec/pantogram/datastore/infrastructure"
 	"github.com/MSHR-Dec/pantogram/datastore/infrastructure/rdb"
@@ -32,6 +34,8 @@ func main() {
 	pb.RegisterDatastoreServer(s, &server.Datastore{
 		RouteDetail: routeDetailInteractor,
 	})
+
+	health.RegisterHealthServer(s, &server.HealthHandler{})
 
 	log.Println("Start gRPC ...")
 	s.Serve(listenPort)

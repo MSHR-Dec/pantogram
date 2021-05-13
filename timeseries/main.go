@@ -1,14 +1,16 @@
 package main
 
 import (
+	"log"
+	"net"
+
 	"github.com/MSHR-Dec/pantogram/timeseries/application"
 	"github.com/MSHR-Dec/pantogram/timeseries/infrastructure"
 	"github.com/MSHR-Dec/pantogram/timeseries/infrastructure/tsdb"
 	"github.com/MSHR-Dec/pantogram/timeseries/pb"
 	"github.com/MSHR-Dec/pantogram/timeseries/server"
 	"google.golang.org/grpc"
-	"log"
-	"net"
+	health "google.golang.org/grpc/health/grpc_health_v1"
 )
 
 func main() {
@@ -31,6 +33,8 @@ func main() {
 	pb.RegisterTimeseriesServer(s, &server.Timeseries{
 		TimeseriesApplication: timeseriesApplication,
 	})
+
+	health.RegisterHealthServer(s, &server.HealthHandler{})
 
 	log.Println("Start gRPC ...")
 	s.Serve(listenPort)

@@ -7,6 +7,3 @@ RUN apt-get update -y && \
     update-locale LANG=ja_JP.UTF-8
 
 ENV LANG="ja_JP.UTF-8"
-
-COPY ./my.cnf /etc/mysql/conf.d/my.cnf
-COPY ./sql /docker-entrypoint-initdb.d

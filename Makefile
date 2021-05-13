@@ -12,6 +12,9 @@ build/datastore:
 .PHONY: build/timeseries
 build/timeseries:
 	docker compose build timeseries
+.PHONY: build/mysql
+build/mysql:
+	docker compose build mysql
 
 .PHONY: docker/up
 docker/up:
@@ -36,16 +39,16 @@ push-private/api:
 	docker push 192.168.0.10:5000/api:v0.0.0
 .PHONY: push-private/datastore
 push-private/datastore:
-	docker tag pantogram_datastore 192.168.0.10:5000/datastore:v0.0.0
-	docker push 192.168.0.10:5000/datastore:v0.0.0
+	docker tag pantogram_datastore 192.168.0.10:5000/datastore:v0.0.2
+	docker push 192.168.0.10:5000/datastore:v0.0.2
 .PHONY: push-private/timeseries
 push-private/timeseries:
-	docker tag pantogram_timeseries 192.168.0.10:5000/timeseries:v0.0.0
-	docker push 192.168.0.10:5000/timeseries:v0.0.0
+	docker tag pantogram_timeseries 192.168.0.10:5000/timeseries:v0.0.2
+	docker push 192.168.0.10:5000/timeseries:v0.0.2
 .PHONY: push-private/mysql
 push-private/mysql:
-	docker tag pantogram_mysql 192.168.0.10:5000/mysql:v0.0.0
-	docker push 192.168.0.10:5000/mysql:v0.0.0
+	docker tag pantogram_mysql 192.168.0.10:5000/mysql:v0.0.1
+	docker push 192.168.0.10:5000/mysql:v0.0.1
 
 .PHONY: push-private
 push-private: push-private/api push-private/datastore push-private/timeseries push-private/mysql
