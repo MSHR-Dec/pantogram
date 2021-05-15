@@ -7,7 +7,7 @@ services:
       dockerfile: ./docker/api/Dockerfile
     environment:
       DATASTORE: datastore:8080
-      TIMESERIES: timeseries:8081
+      TIMESERIES: timeseries:8080
     networks:
       - pantogram
 

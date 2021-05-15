@@ -43,8 +43,8 @@ push-private/datastore:
 	docker push 192.168.0.10:5000/datastore:v0.0.2
 .PHONY: push-private/timeseries
 push-private/timeseries:
-	docker tag pantogram_timeseries 192.168.0.10:5000/timeseries:v0.0.2
-	docker push 192.168.0.10:5000/timeseries:v0.0.2
+	docker tag pantogram_timeseries 192.168.0.10:5000/timeseries:v0.0.3
+	docker push 192.168.0.10:5000/timeseries:v0.0.3
 .PHONY: push-private/mysql
 push-private/mysql:
 	docker tag pantogram_mysql 192.168.0.10:5000/mysql:v0.0.1

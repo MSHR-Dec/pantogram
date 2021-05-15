@@ -25,7 +25,7 @@ func main() {
 		companyRepository,
 		prefectureRepository)
 
-	listenPort, err := net.Listen("tcp", ":8081")
+	listenPort, err := net.Listen("tcp", infrastructure.Environment.GRPCListenPort)
 	if err != nil {
 		log.Fatalln(err)
 	}
