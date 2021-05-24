@@ -37,9 +37,12 @@ func (d DatastoreApi) Request(routes []string) []*pb.RouteDetail {
 
 func (d DatastoreApi) requestDatastoreTask(datastoreCh chan<- *pb.RouteDetail, conn *grpc.ClientConn, routeName string) {
 	c := pb.NewDatastoreClient(conn)
-	res, err := c.GetRouteDetail(context.TODO(), &pb.Route{
+
+	request := &pb.Route{
 		Name: routeName,
-	})
+	}
+
+	res, err := c.GetRouteDetail(context.TODO(), request)
 	if err != nil {
 		log.Println(err)
 	}

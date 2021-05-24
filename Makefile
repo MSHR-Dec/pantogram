@@ -35,8 +35,8 @@ all: protoc build/api build/datastore build/timeseries docker/up
 
 .PHONY: push-private/api
 push-private/api:
-	docker tag pantogram_api 192.168.0.10:5000/api:v0.0.0
-	docker push 192.168.0.10:5000/api:v0.0.0
+	docker tag pantogram_api 192.168.0.10:5000/api:v0.0.1
+	docker push 192.168.0.10:5000/api:v0.0.1
 .PHONY: push-private/datastore
 push-private/datastore:
 	docker tag pantogram_datastore 192.168.0.10:5000/datastore:v0.0.2
