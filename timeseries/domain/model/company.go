@@ -1,7 +1,7 @@
 package model
 
 type Company struct {
-	Tag CompanyTag
+	Tag   CompanyTag
 	Field CompanyField
 }
 

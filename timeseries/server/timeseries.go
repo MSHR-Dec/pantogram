@@ -2,6 +2,7 @@ package server
 
 import (
 	"context"
+
 	"github.com/MSHR-Dec/pantogram/timeseries/application"
 	"github.com/MSHR-Dec/pantogram/timeseries/pb"
 )

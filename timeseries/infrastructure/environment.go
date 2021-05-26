@@ -1,6 +1,8 @@
 package infrastructure
 
-import "github.com/kelseyhightower/envconfig"
+import (
+	"github.com/kelseyhightower/envconfig"
+)
 
 type OsEnvironment struct {
 	Env              string `default:"local"`

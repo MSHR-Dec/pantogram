@@ -1,8 +1,9 @@
 package application
 
 import (
-	"github.com/MSHR-Dec/pantogram/timeseries/domain/repository"
 	"time"
+
+	"github.com/MSHR-Dec/pantogram/timeseries/domain/repository"
 )
 
 type Route struct {

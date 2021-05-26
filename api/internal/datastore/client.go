@@ -4,8 +4,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/MSHR-Dec/pantogram/datastore/pb"
 	"google.golang.org/grpc"
+
+	"github.com/MSHR-Dec/pantogram/datastore/pb"
 )
 
 type DatastoreApi struct {

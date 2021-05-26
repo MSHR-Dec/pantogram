@@ -4,13 +4,14 @@ import (
 	"log"
 	"net"
 
+	"google.golang.org/grpc"
+	health "google.golang.org/grpc/health/grpc_health_v1"
+
 	"github.com/MSHR-Dec/pantogram/timeseries/application"
 	"github.com/MSHR-Dec/pantogram/timeseries/infrastructure"
 	"github.com/MSHR-Dec/pantogram/timeseries/infrastructure/tsdb"
 	"github.com/MSHR-Dec/pantogram/timeseries/pb"
 	"github.com/MSHR-Dec/pantogram/timeseries/server"
-	"google.golang.org/grpc"
-	health "google.golang.org/grpc/health/grpc_health_v1"
 )
 
 func main() {

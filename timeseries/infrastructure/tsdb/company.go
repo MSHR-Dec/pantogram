@@ -6,7 +6,6 @@ import (
 	"time"
 
 	"github.com/MSHR-Dec/pantogram/timeseries/domain/repository"
-
 	influxdb2 "github.com/influxdata/influxdb-client-go/v2"
 )
 

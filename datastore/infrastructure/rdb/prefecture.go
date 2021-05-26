@@ -1,8 +1,9 @@
 package rdb
 
 import (
-	"github.com/MSHR-Dec/pantogram/datastore/domain/model"
 	"gorm.io/gorm"
+
+	"github.com/MSHR-Dec/pantogram/datastore/domain/model"
 )
 
 type PrefectureRDBRepository struct {

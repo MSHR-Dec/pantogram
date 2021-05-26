@@ -2,9 +2,11 @@ package timeseries
 
 import (
 	"context"
-	"github.com/MSHR-Dec/pantogram/timeseries/pb"
-	"google.golang.org/grpc"
 	"log"
+
+	"google.golang.org/grpc"
+
+	"github.com/MSHR-Dec/pantogram/timeseries/pb"
 )
 
 type TimeseriesApi struct {

@@ -1,10 +1,11 @@
 package application
 
 import (
+	"time"
+
 	"github.com/MSHR-Dec/pantogram/timeseries/domain/model"
 	"github.com/MSHR-Dec/pantogram/timeseries/domain/repository"
 	"github.com/MSHR-Dec/pantogram/timeseries/domain/service"
-	"time"
 )
 
 type prefectureApplication struct {

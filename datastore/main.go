@@ -4,6 +4,7 @@ import (
 	"log"
 	"net"
 
+	"google.golang.org/grpc"
 	health "google.golang.org/grpc/health/grpc_health_v1"
 
 	"github.com/MSHR-Dec/pantogram/datastore/application"
@@ -11,7 +12,6 @@ import (
 	"github.com/MSHR-Dec/pantogram/datastore/infrastructure/rdb"
 	"github.com/MSHR-Dec/pantogram/datastore/pb"
 	"github.com/MSHR-Dec/pantogram/datastore/server"
-	"google.golang.org/grpc"
 )
 
 func main() {

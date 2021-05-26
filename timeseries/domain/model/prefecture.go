@@ -1,6 +1,8 @@
 package model
 
-import "math"
+import (
+	"math"
+)
 
 type Prefecture struct {
 	Tag   PrefectureTag

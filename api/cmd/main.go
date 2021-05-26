@@ -5,14 +5,13 @@ import (
 	"runtime"
 
 	"github.com/carlescere/scheduler"
-
-	"github.com/MSHR-Dec/pantogram/api/internal/timeseries"
-	"github.com/MSHR-Dec/pantogram/api/pkg/conversion"
-
-	"github.com/MSHR-Dec/pantogram/api/internal/datastore"
-	"github.com/MSHR-Dec/pantogram/api/pkg/delay"
 	"github.com/kelseyhightower/envconfig"
 	"google.golang.org/grpc"
+
+	"github.com/MSHR-Dec/pantogram/api/internal/datastore"
+	"github.com/MSHR-Dec/pantogram/api/internal/timeseries"
+	"github.com/MSHR-Dec/pantogram/api/pkg/conversion"
+	"github.com/MSHR-Dec/pantogram/api/pkg/delay"
 )
 
 type osEnvironment struct {

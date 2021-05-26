@@ -1,6 +1,8 @@
 package model
 
-import "time"
+import (
+	"time"
+)
 
 type DailyRouteSummary struct {
 	ID             int `gorm:"primary_key;not null"`
