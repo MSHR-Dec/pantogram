@@ -7,4 +7,5 @@
 /docker/mysql/doc
 /docker/influxdb/*
 !/docker/influxdb/.gitkeep
-/docker/grafana/data
+/docker/chronograf/data
+#/docker/grafana/data
